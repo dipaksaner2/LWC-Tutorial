@@ -6,28 +6,33 @@
         class="slds-m-left_x-small" disabled={buttonLightning}></lightning-button>
 
 
-    <div class="c-container slds-box slds-theme_shade" >
+    <div class="c-container slds-box slds-theme_shade">
         <lightning-layout>
             <!-- Classic View -->
             <lightning-layout-item size="6" padding="around-small">
                 <template if:true={buttonClassic}>
-                    <div class="slds-m-top_medium slds-m-bottom_x-large">
-                        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
-                            Classic Form
-                        </h2>
+                    <form>
+                        <div class="slds-m-top_medium slds-m-bottom_x-large">
+                            <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                                Classic Form
+                            </h2>
 
-                        <!-- Input Fields for Form -->
-                        <div class="slds-p-around_medium lgc-bg">
-                            <lightning-input type="text" label="Name"></lightning-input>
+                            <!-- Input Fields for Form -->
+                            <div class="slds-p-around_medium lgc-bg">
+                                <lightning-input type="text" label="Name" value={fullname} onchange={handleFullNameChange}></lightning-input>
+                            </div>
+                            <div class="slds-p-around_medium lgc-bg">
+                                <lightning-input type="Number" label="Mobile No" value={mobileNo} onchange={handleMobileNoChange}></lightning-input>
+                            </div>
+                            <div class="slds-p-around_medium lgc-bg">
+                                <lightning-input type="number" label="Account No" value={accountNo} onchange={handleAccountNoChange}></lightning-input>
+                            </div>
+                            <lightning-button variant="brand" label="Submit" title="Primary action" onclick={handleClickAccount} class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button variant="destructive" label="Rest" title="Primary action" onclick={handleRestAccount} class="slds-m-left_x-small"></lightning-button>
                         </div>
-                        <div class="slds-p-around_medium lgc-bg">
-                            <lightning-input type="Number" label="Mobile No"></lightning-input>
-                        </div>
-                        <div class="slds-p-around_medium lgc-bg">
-                            <lightning-input type="Date" label="Date Of Birth"></lightning-input>
-                        </div>
-                    </div>
+                    </form>
                 </template>
+
             </lightning-layout-item>
 
             <!-- Lighting View -->
@@ -40,14 +45,16 @@
 
                         <!-- Input Fields for Form -->
                         <div class="slds-p-around_medium lgc-bg">
-                            <lightning-input type="text" label="Name"></lightning-input>
+                            <lightning-input type="text" label="Name" value={fullname} onchange={handleFullNameChange}></lightning-input>
                         </div>
                         <div class="slds-p-around_medium lgc-bg">
-                            <lightning-input type="Number" label="Mobile No"></lightning-input>
+                            <lightning-input type="Number" label="Mobile No" value={mobileNo} onchange={handleMobileNoChange}></lightning-input>
                         </div>
                         <div class="slds-p-around_medium lgc-bg">
-                            <lightning-input type="Date" label="Date Of Birth"></lightning-input>
+                            <lightning-input type="number" label="Account No" value={accountNo} onchange={handleAccountNoChange}></lightning-input>
                         </div>
+                        <lightning-button variant="brand" label="Submit" title="Primary action" onclick={handleClickAccount} class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button variant="destructive" label="Rest" title="Primary action" onclick={handleRestAccount} class="slds-m-left_x-small"></lightning-button>
                     </div>
                 </template>
             </lightning-layout-item>

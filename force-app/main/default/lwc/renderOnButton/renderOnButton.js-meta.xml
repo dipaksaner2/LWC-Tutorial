@@ -3,6 +3,7 @@
     <apiVersion>55.0</apiVersion>
     <isExposed>true</isExposed>
     <targets>
+        <target>lightning__RecordAction</target>
         <target>lightning__RecordPage</target>
         <target>lightning__HomePage</target>
     </targets>
